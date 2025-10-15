@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartQuiz – Test Your Knowledge Professionally</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="home" class="page">
+    <div class="container">
+      <h1>SmartQuiz</h1>
+      <p class="tagline">Test Your Knowledge Professionally</p>
+      <div class="category-select">
+        <label for="category">Select Category:</label>
+        <select id="category">
+          <option value="chemistry">Chemistry</option>
+          <option value="general">General Knowledge</option>
+          <option value="coding">Coding</option>
+        </select>
+      </div>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+  </div>
+
+  <div id="quiz" class="page hidden">
+    <div class="container">
+      <div class="progress-bar">
+        <div id="progress" class="progress-fill"></div>
+      </div>
+      <div class="question-counter">Question <span id="current-q">1</span> of <span id="total-q">10</span></div>
+      <div class="timer">Time: <span id="time">00:00</span></div>
+      <div id="question"></div>
+      <ul id="choices"></ul>
+      <div class="buttons">
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="next-btn" disabled>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="result" class="page hidden">
+    <div class="container">
+      <h2>Your Score: <span id="final-score">0</span>/<span id="total-score">10</span></h2>
+      <p id="performance-msg"></p>
+      <div class="answers-review">
+        <h3>Review Your Answers</h3>
+        <div id="review-content"></div>
+      </div>
+      <div class="buttons">
+        <button id="retake-btn">Retake Quiz</button>
+        <button id="home-btn">Go Home</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
